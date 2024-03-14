@@ -19,7 +19,7 @@ GIT: https://git-scm.com/downloads
 **Open CMD in Server Directory:**
 > python -m pip install -r requirements.txt
 > python manage.py migrate
-> python manage.py run server
+> python manage.py runserver
 > open GANACHE and import project 
 > open CMD in the Client Directory
 
@@ -27,6 +27,9 @@ GIT: https://git-scm.com/downloads
 > npm install --force
 > truffle migrate
 > npm start
+
+## Open CMD in Client Directory
+> ipfs daemon
 
 ## Metamask
 
@@ -41,14 +44,6 @@ Open: http://localhost:4200/ by typing this address in your Chrome browser.
 In the Server dir : python manage.py flush
 In the Client dir : truffle migrate
 
-Watch this tutorial to solve errors or clear doubts: https://drive.google.com/file/d/1AQQApAxV636oZmzbKU8zp6JhftGJ5KxZ/view?usp=sharing
-
-
-# Contact Me
-
-Contact me if you have any queries. 
-Telegram: @XenodromeKID
-Email: ganeshgovind11@gmail.com
 
 ## Presentation 
 
@@ -58,13 +53,14 @@ Report: https://docs.google.com/document/d/1zPieHPK766E8nyIFb3dWdcEFQxbabsW4F1EK
 
 Final Review (UG College): https://docs.google.com/presentation/d/1KYbY9yCvtWZcfp6C2Zeq3_JtrMKmj4t_ScE-V2U_jGU/edit?usp=sharing
 
+Demo video: https://drive.google.com/file/d/1XsD0nkrXIW5qNopMjwnROr6BZYUBrTQK/view?usp=sharing
+
 ## Journal Publication
 
 **Journal of Emerging Technologies and Innovative Research  | An International Open Access , Peer-reviewed, Refereed Journal |  ISSN: 2349-5162 |  Impact factor 7.95 Calculate by Google and Semantic Scholar |  [UGC Approved Journal No 63975](http://jetir.org/jetir%20ugc%20approval.pdf) |  ESTD Year : 2014 |  Email: editor@jetir.org**
 
 View: [EHR-2.0 PROJECT REPORT (jetir.org)](https://www.jetir.org/papers/JETIRTHE2011.pdf)
 
-Project Implementation: https://drive.google.com/file/d/1XsD0nkrXIW5qNopMjwnROr6BZYUBrTQK/view?usp=sharing
 
 ## UML diagrams
 
