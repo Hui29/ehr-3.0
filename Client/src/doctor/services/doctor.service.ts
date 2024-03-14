@@ -91,7 +91,8 @@ export class DoctorService {
         .then((result: any) => {
           console.log(result);
           this.http
-            .get("https://ipfs.infura.io/ipfs/" + result)
+            //.get("https://ipfs.infura.io/ipfs/" + result)
+            .get("http://127.0.0.1:8080/ipfs/" + result)
             .subscribe((data: any) => {
               console.log(data);
               resolve(data);
@@ -205,7 +206,8 @@ export class DoctorService {
             console.log(result);
             if (result.length >= 1) {
               this.http
-                .get("https://ipfs.infura.io/ipfs/" + result)
+                //.get("https://ipfs.infura.io/ipfs/" + result)
+                .get("http://127.0.0.1:8080/ipfs/" + result)
                 .subscribe((data: any) => {
                   console.log(data);
                   resolve(data);
