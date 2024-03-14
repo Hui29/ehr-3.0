@@ -9,9 +9,13 @@ export class IpfsService {
   ipfs: any;
   constructor() {
     this.ipfs = new IPFS({
-      host: 'ipfs.infura.io',
+      /*host: 'ipfs.infura.io',
       port: 5001,
       protocol: 'https',
+      */
+     host:'127.0.0.1',
+     port:5001,
+     protocol:'http'
     });
   }
 
