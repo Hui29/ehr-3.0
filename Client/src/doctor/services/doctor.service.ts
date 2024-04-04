@@ -113,7 +113,7 @@ export class DoctorService {
       date: Date.now(),
     };
     return new Promise((resolve, reject) => {
-      this.getPatientRecords(this.patientId)
+      this.getPatientRecords(this.patientId, false)
         .then((record: any) => {
           console.log(record);
 
@@ -195,7 +195,7 @@ export class DoctorService {
     });
   }
 
-  async getPatientRecords(id: any): Promise<any> {
+  async getPatientRecords(id: any, applyFilter: boolean = true): Promise<any> {
     return new Promise((resolve, reject) => {
       this.blockchainService.getContract().then((r: any) => {
         this.contract = r;
@@ -210,10 +210,20 @@ export class DoctorService {
                 .get("http://127.0.0.1:8080/ipfs/" + result)
                 .subscribe((data: any) => {
                   console.log(data);
-                  if(data.MedRecord[0].doctor==this.account) //只能查看自己的患者
-                    resolve(data);
-                  else resolve(null);
-            
+				  if (applyFilter == true && data != null) {
+					const filteredRecords = {
+					  ...data,
+					  MedRecord: data.MedRecord.filter((record:any) => record.doctor === this.account)
+					};
+					console.log(filteredRecords);
+					if (filteredRecords != null) {
+					  resolve(filteredRecords);
+					} else {
+				      resolve(null);
+					}
+				  } else {
+					resolve(data);
+				  }
                 });
             } else {
               resolve(null);
@@ -226,6 +236,7 @@ export class DoctorService {
       });
     });
   }
+  
 
   async checkIsDr(): Promise<any> {
     return new Promise((resolve, reject) => {
